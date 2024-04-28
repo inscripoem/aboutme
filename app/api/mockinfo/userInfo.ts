@@ -4,7 +4,7 @@ export default {
             name: 'Erik L',
             career: 'Full-Stack Developer',
             avatar: './user/avatar.jpg', // 头像
-            snapshot: '', // 生活照
+            snapshot: './user/snapshot.png', // 生活照
             bio: 'All work and no play makes Jack a dull boy.',
         },
         contactInfo: {
@@ -23,7 +23,7 @@ export default {
             {
                 social: 'wechat',
                 account: '@yourwechat',
-                qrcode: './userinfo/wechat_qrcode.png',
+                qrcode: './user/wechat_qrcode.jpg',
             },
             {
                 social: 'weibo',
@@ -62,6 +62,15 @@ export default {
             { language: 'German', level: 'Proficient' },
             { language: 'Cantonese', level: 'Intermediate' },
             { language: 'French', level: 'Beginner' },
+        ],
+        hobbies: [
+            { hobby: 'Gaming', type: 'game' },
+            { hobby: 'Travelling', type: 'travel' },
+            { hobby: 'Photography', type: 'photography' },
+            { hobby: 'Badminton', type: 'badminton' },
+            { hobby: 'Coding', type: 'coding' },
+            { hobby: 'Design', type: 'design' },
+            { hobby: 'Music', type: 'music' },
         ],
     },
     status: 0,

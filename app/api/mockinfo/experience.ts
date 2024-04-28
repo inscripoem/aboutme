@@ -4,8 +4,8 @@ export default {
         // Apple
         {
             logo: './commonicons/apple.svg', // company logo
-            hireDate: 1690383378873, // Date of hire
-            lastDay: 1690383378873, // Last day of work
+            hireDate: '2021-01', // Date of hire
+            lastDay: '2023-12', // Last day of work
             companyFullname: 'Apple', // Full name of the company
             companyAbb: 'Apple', // Abbreviation of the company name
             jobTitle: 'Frontend Developer',
@@ -15,10 +15,10 @@ export default {
         },
         {
             logo: './commonicons/trip.svg', // company logo
-            hireDate: 1690383378873, // Date of hire
-            lastDay: 1690383378873, // Last day of work
+            hireDate: '2005-3', // Date of hire
+            lastDay: '2018-12', // Last day of work
             companyFullname: 'Trip', // Full name of the company
-            companyAbb: 'Trip', // Abbreviation of the company name
+            companyAbb: 'Trip.comTrip.comTrip.comTrip.com', // Abbreviation of the company name
 
             jobTitle: 'UI/UX Designer',
             city: 'Shanghai', // City of employment
@@ -27,8 +27,8 @@ export default {
         },
         {
             logo: './commonicons/microsoft.svg', // company logo
-            hireDate: 1690383378873, // Date of hire
-            lastDay: 1690383378873, // Last day of work
+            hireDate: '2019-1', // Date of hire
+            lastDay: '2022-12', // Last day of work
             companyFullname: 'Microsoft', // Full name of the company
             companyAbb: 'Microsoft', // Abbreviation of the company name
             jobTitle: 'Product Manager',

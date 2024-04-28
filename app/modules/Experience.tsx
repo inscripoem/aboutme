@@ -1,5 +1,6 @@
 import experience from '../api/mockinfo/experience'
 import { map as _map } from 'lodash'
+import { formatEnDateMY } from '@/app/util/date'
 
 const Experience = () => {
     const { data, title } = experience || {}
@@ -7,7 +8,7 @@ const Experience = () => {
     return (
         <div className="experience-module">
             <div className="p-4 w-full flex-col  justify-start items-start gap-4 inline-flex  min-w-[35rem]">
-                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
+                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight dark:text-zinc-200">
                     {title}
                 </div>
                 <div className="self-stretch flex-col justify-start items-start pt-2 flex pb-2">
@@ -22,6 +23,8 @@ const Experience = () => {
                             city,
                             Responsibilities,
                         } = item || {}
+                        const hireDateFormatted = formatEnDateMY(hireDate)
+                        const lastDayFormatted = formatEnDateMY(lastDay)
                         return (
                             <div
                                 key={`experience_${index}`}
@@ -36,17 +39,17 @@ const Experience = () => {
                                     </div>
                                 </div>
                                 <div className="grow shrink basis-0 self-stretch pt-0.5 justify-center items-start gap-1 flex">
-                                    <div className=" min-w-[10rem] text-xs">
+                                    <div className=" min-w-[10rem] text-xs basis-3/12">
                                         <div className="">
-                                            <div className="text-slate-600 text-xs font-normal tracking-tight float-left">
-                                                Sep 2010 - Jul 2013
+                                            <div className="text-slate-600 text-xs font-normal tracking-tight float-left dark:text-stone-400">
+                                                {hireDateFormatted} - {lastDayFormatted}
                                             </div>
                                             {city ? (
                                                 <div className="float-right ml-2">
                                                     <div className="inline w-1.5 h-1.5 px-px py-px justify-center items-center relative bottom-[2px]">
                                                         <img src={'./misc/location.svg'} className="inline w-4 h-4" />
                                                     </div>
-                                                    <div className="inline text-slate-500 text-xs font-normal tracking-tight">
+                                                    <div className="inline text-slate-500 text-xs font-normal tracking-tight dark:text-stone-300">
                                                         {city}
                                                     </div>
                                                 </div>
@@ -58,16 +61,16 @@ const Experience = () => {
                                             </div>
 
                                             <div className="grow shrink basis-0 flex-col justify-end items-start gap-0.5 inline-flex ml-2">
-                                                <div className="self-stretch text-slate-500 text-xs font-normal leading-3 tracking-tight">
+                                                <div className="self-stretch text-slate-500 text-xs font-normal leading-3 tracking-tight dark:text-stone-300">
                                                     {jobTitle}
                                                 </div>
-                                                <div className="self-stretch text-stone-600 text-lg font-bold leading-3 mt-2">
+                                                <div className="self-stretch text-stone-600 text-lg font-bold leading-5  break-all whitespace-break-spaces mt-0.5 dark:text-stone-200">
                                                     {companyAbb}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="ml-4 pl-4 grow shrink basis-0 text-slate-500 text-sm font-normal tracking-tight ">
+                                    <div className="ml-4 pl-4 grow shrink basis-0 text-slate-500 text-sm font-normal tracking-tight dark:text-gray-400">
                                         <div className="float-right">{Responsibilities}</div>
                                     </div>
                                 </div>
